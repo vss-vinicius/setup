@@ -5,6 +5,7 @@
     padding: 0;
     font-family: 'Salsa', cursive;
     color: white;
+    transition: all 0.3s ease-in-out;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
@@ -14,6 +15,7 @@ body {
     background-image: url('fundo.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 hr {
@@ -27,10 +29,18 @@ h1 {
     padding: 10px;
 }
 
-div {
+section {
     display: grid;
     justify-content: center;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+section:hover {
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 h2 {
@@ -48,17 +58,26 @@ li {
     font-size: 18px;
 }
 
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff5733;
+}
+
 @media (min-width: 1280px) {
-    div {
+    section {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 }
 
 @media (max-width: 530px) {
     h1 {
         font-size: 40px;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
     }
 
     h2 {
@@ -66,10 +85,25 @@ li {
     }
 
     li {
-        font-size: 12px;
+        font-size: 14px;
     }
 
-    div {
-        margin-bottom: 60px;
+    section {
+        margin-bottom: 30px;
     }
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    margin-top: 20px;
 }
