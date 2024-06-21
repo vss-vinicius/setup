@@ -8,6 +8,10 @@
     transition: all 0.3s ease-in-out;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
 
 body {
@@ -50,12 +54,23 @@ header a:hover {
     background-color: rgba(255, 87, 51, 0.7);
 }
 
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    header a {
+        text-align: center;
+        padding: 10px 0;
+    }
+}
+
 h1 {
     text-align: center;
     font-size: 75px;
     padding: 10px;
-    margin-top: 60px;
-    /* Espaço para o menu fixo */
+    margin-top: 60px; /* Espaço para o menu fixo */
 }
 
 .header-banner {
@@ -97,6 +112,7 @@ ul {
     justify-content: center;
     gap: 20px;
     padding: 20px;
+    list-style-type: none; /* Remover bolinhas de lista */
 }
 
 li {
@@ -133,8 +149,7 @@ a:hover {
 
 .contact-link {
     display: inline-block;
-    background-color: #ff0000;
-    /* Ajuste da cor para vermelho */
+    background-color: #ff0000; /* Ajuste da cor para vermelho */
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -142,8 +157,7 @@ a:hover {
 }
 
 .contact-link:hover {
-    background-color: #ff4d4d;
-    /* Ajuste da cor para vermelho */
+    background-color: #ff4d4d; /* Ajuste da cor para vermelho */
 }
 
 @keyframes fadeIn {
